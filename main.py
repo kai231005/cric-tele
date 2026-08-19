@@ -1,6 +1,10 @@
+import os
 import requests
+from dotenv import load_dotenv
 
-API_KEY = "ebd4191c-960d-4cc5-a348-fb278f959ce3"
+load_dotenv()  # reads the .env file and loads values into environment
+
+API_KEY = os.getenv("CRICAPI_KEY")
 URL = "https://api.cricapi.com/v1/currentMatches"
 
 INDIA_TEAMS = ["India", "India Women"]
